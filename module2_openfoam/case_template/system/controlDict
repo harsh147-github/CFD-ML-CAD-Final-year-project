@@ -1,0 +1,77 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     foamRun;
+solver          incompressibleFluid;
+
+startFrom       latestTime;
+startTime       0;
+stopAt          endTime;
+endTime         __ENDTIME__;      // SIMPLE iterations (runner substitutes)
+deltaT          1;
+
+writeControl    timeStep;
+writeInterval   __WRITEINT__;
+purgeWrite      2;
+
+writeFormat     ascii;
+writePrecision  7;
+writeCompression off;
+
+timeFormat      general;
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    // Torque / force on the rotating blade (moment about the fan axis = My)
+    rotorForces
+    {
+        type            forces;
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        log             true;
+
+        patches         (blade);
+        rho             rhoInf;
+        rhoInf          1.2;
+
+        CofR            (0 0 0);     // fan shaft centre
+    }
+
+    // Net volumetric airflow through a plane below the fan (axis = Y)
+    flowMonitor
+    {
+        type            surfaceFieldValue;
+        libs            ("libfieldFunctionObjects.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        log             true;
+
+        regionType      sampledSurface;
+        sampledSurfaceDict
+        {
+            type            triSurfaceMesh;
+            surface         measure_disk.stl;   // disk over the fan swept area
+            source          cells;
+            interpolate     true;
+        }
+
+        operation       areaNormalIntegrate;
+        writeFields     false;
+        fields          (U);
+    }
+}
+
+// ************************************************************************* //

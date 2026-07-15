@@ -1,0 +1,21 @@
+{
+  "design": {
+    "global_pitch_deg": 10.0,
+    "twist_deg": -8.0,
+    "chord_scale": 1.0,
+    "camber": 0.04,
+    "thickness_tc": 0.04,
+    "sweep_deg": 5.0,
+    "tip_taper": 0.9,
+    "n_blades": 3
+  },
+  "valid": true,
+  "n_solids": 1,
+  "n_faces": 366,
+  "volume_mm3": 41536.06953575752,
+  "bbox_mm": {
+    "dx": 244.1188488039735,
+    "dy": 24.0,
+    "dz": 268.9358439406344
+  }
+}

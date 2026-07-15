@@ -1,0 +1,34 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    object      omega;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+omegaInlet      2.0;          // 1/s freestream specific dissipation
+
+dimensions      [0 0 -1 0 0 0 0];
+
+internalField   uniform $omegaInlet;
+
+boundaryField
+{
+    blade
+    {
+        type            omegaWallFunction;
+        value           uniform $omegaInlet;
+    }
+
+    farfield
+    {
+        type            inletOutlet;
+        inletValue      uniform $omegaInlet;
+        value           uniform $omegaInlet;
+    }
+}
+
+// ************************************************************************* //

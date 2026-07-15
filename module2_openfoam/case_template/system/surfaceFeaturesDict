@@ -1,0 +1,25 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      surfaceFeaturesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaces ("blade.stl");
+
+includedAngle   150;
+
+subsetFeatures
+{
+    nonManifoldEdges no;
+    openEdges        yes;
+}
+
+writeObj yes;
+
+// ************************************************************************* //

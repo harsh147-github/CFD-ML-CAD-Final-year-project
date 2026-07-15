@@ -1,0 +1,31 @@
+{
+  "name": "baseline",
+  "design": {
+    "global_pitch_deg": 10.0,
+    "twist_deg": -8.0,
+    "chord_scale": 1.0,
+    "camber": 0.04,
+    "thickness_tc": 0.04,
+    "sweep_deg": 5.0,
+    "tip_taper": 0.9,
+    "n_blades": 3
+  },
+  "rpm": 350.0,
+  "omega_rad_s": 36.651914291880914,
+  "geometry": {
+    "volume_mm3": 41536.06953575752,
+    "watertight_m": true
+  },
+  "status": "ok",
+  "case": "//wsl.localhost/Ubuntu/home/harsh/fan_cfd/baseline",
+  "converged": true,
+  "torque_Nm": 0.00042762298333333333,
+  "torque_cov": 0.0019609218273787484,
+  "power_W": 0.015673200934371755,
+  "flow_m3s": 0.005166349523333334,
+  "flow_cmm": 0.3099809714,
+  "flow_cov": 0.016118901657988502,
+  "plane_area_m2": 0.080367367,
+  "service_value_cmm_per_W": 19.777770520392124,
+  "n_force_samples": 201
+}

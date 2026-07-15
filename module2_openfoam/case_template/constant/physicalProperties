@@ -1,0 +1,18 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+viscosityModel  constant;
+
+// kinematic viscosity of air ~25 C
+nu              [0 2 -1 0 0 0 0] 1.5e-05;
+
+// ************************************************************************* //

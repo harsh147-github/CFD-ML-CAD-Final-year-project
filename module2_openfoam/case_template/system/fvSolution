@@ -1,0 +1,63 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver          GAMG;
+        tolerance       1e-08;
+        relTol          0.05;
+        smoother        GaussSeidel;
+        nCellsInCoarsestLevel 20;
+    }
+
+    "(U|k|omega)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        nSweeps         2;
+        tolerance       1e-08;
+        relTol          0.1;
+    }
+}
+
+SIMPLE
+{
+    nNonOrthogonalCorrectors 1;
+    consistent      yes;          // SIMPLEC - better convergence for MRF
+
+    residualControl
+    {
+        U               1e-4;
+        p               1e-4;
+        "(k|omega)"     1e-4;
+    }
+
+    pRefCell        0;
+    pRefValue       0;
+}
+
+relaxationFactors
+{
+    fields
+    {
+        p               0.7;      // SIMPLEC allows higher relaxation
+    }
+    equations
+    {
+        U               0.7;
+        "(k|omega)"     0.7;
+    }
+}
+
+// ************************************************************************* //

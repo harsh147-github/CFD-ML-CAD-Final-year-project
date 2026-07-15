@@ -1,0 +1,18 @@
+{
+  "design": {
+    "global_pitch_deg": 6.524415284433223,
+    "twist_deg": -17.67729492100225,
+    "chord_scale": 0.7721294385704833,
+    "camber": 0.04501012193109459,
+    "thickness_tc": 0.03345307632225738,
+    "sweep_deg": -3.5492651320363438,
+    "tip_taper": 0.5196825129728071,
+    "n_blades": 3
+  },
+  "pred_flow_cmm": 4.360501059033472,
+  "pred_power_W": 0.02350295475167735,
+  "geometry": {
+    "volume_mm3": 35097.610782777796,
+    "valid": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "doe2_009",
+  "design": {
+    "global_pitch_deg": 18.12210412878994,
+    "twist_deg": -13.135446470801293,
+    "chord_scale": 0.7551028705386872,
+    "camber": 0.029057845652484177,
+    "thickness_tc": 0.048498051548160795,
+    "sweep_deg": -7.4808309551399494,
+    "tip_taper": 0.5925449618961948,
+    "n_blades": 3
+  },
+  "rpm": 350.0,
+  "omega_rad_s": 36.651914291880914,
+  "status": "ok",
+  "case": "//wsl.localhost/Ubuntu/home/harsh/fan_cfd/doe2_009",
+  "converged": true,
+  "torque_Nm": 0.000490948945925926,
+  "torque_cov": 0.00560748884705247,
+  "power_W": 0.017994218687766315,
+  "flow_m3s": 0.007072747981481481,
+  "flow_cmm": 0.42436487888888885,
+  "flow_cov": 0.011683181043242279,
+  "plane_area_m2": 0.080367367,
+  "service_value_cmm_per_W": 23.58340121638072,
+  "n_force_samples": 93
+}

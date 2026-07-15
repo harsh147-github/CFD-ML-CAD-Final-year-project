@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+| Background box (metres). Fan at origin, rotation axis = Y.                   |
+| ~25 mm base cells; snappyHexMesh refines around the blade.                  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+xmin -0.45; xmax 0.45;
+ymin -0.60; ymax 0.60;
+zmin -0.45; zmax 0.45;
+
+vertices
+(
+    ($xmin $ymin $zmin)
+    ($xmax $ymin $zmin)
+    ($xmax $ymax $zmin)
+    ($xmin $ymax $zmin)
+    ($xmin $ymin $zmax)
+    ($xmax $ymin $zmax)
+    ($xmax $ymax $zmax)
+    ($xmin $ymax $zmax)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (36 48 36) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    farfield
+    {
+        type patch;
+        faces
+        (
+            (0 1 2 3)   // zmin
+            (4 5 6 7)   // zmax
+            (0 1 5 4)   // ymin
+            (2 3 7 6)   // ymax
+            (1 2 6 5)   // xmax
+            (0 3 7 4)   // xmin
+        );
+    }
+);
+
+// ************************************************************************* //

@@ -1,0 +1,32 @@
+{
+  "name": "sweep_15",
+  "design": {
+    "global_pitch_deg": 6.524415284433223,
+    "twist_deg": -17.67729492100225,
+    "chord_scale": 0.7721294385704833,
+    "camber": 0.04501012193109459,
+    "thickness_tc": 0.03345307632225738,
+    "sweep_deg": -3.5492651320363438,
+    "tip_taper": 0.5196825129728071,
+    "n_blades": 3
+  },
+  "rpm": 350.0,
+  "omega_rad_s": 36.651914291880914,
+  "status": "ok",
+  "geometry": {
+    "volume_mm3": 35097.610782777796,
+    "valid": true
+  },
+  "trustworthy_cfd": true,
+  "case": "//wsl.localhost/Ubuntu/home/harsh/fan_cfd/sweep_15",
+  "converged": true,
+  "torque_Nm": 0.0004744529026388889,
+  "torque_cov": 6.0580825479892394e-05,
+  "power_W": 0.017389607123054675,
+  "flow_m3s": 0.04560512884722222,
+  "flow_cmm": 2.736307730833333,
+  "flow_cov": 0.0006643269959184975,
+  "plane_area_m2": 0.080367367,
+  "service_value_cmm_per_W": 157.35305067390564,
+  "n_force_samples": 241
+}

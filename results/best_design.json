@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "name": "baseline",
+    "power_W": 0.015673200934371755,
+    "flow_cmm": 0.3099809714,
+    "service_value": 19.777770520392124
+  },
+  "optimized": {
+    "name": "opt_02",
+    "power_W": 0.0136768732130215,
+    "flow_cmm": 2.191997699166666,
+    "service_value": 160.27038234731106,
+    "design": {
+      "global_pitch_deg": 10.126502336544998,
+      "twist_deg": -17.999738627868535,
+      "chord_scale": 0.9402557453799066,
+      "camber": 0.0256266266823453,
+      "thickness_tc": 0.0200060182326468,
+      "sweep_deg": 0.8807753255102666,
+      "tip_taper": 0.7451705537107477,
+      "n_blades": 3
+    }
+  },
+  "improvement": {
+    "airflow_pct": 607.1394380328295,
+    "power_pct": -12.737204925206145,
+    "service_value_pct": 710.3561631583409
+  },
+  "n_trustworthy_designs": 30
+}

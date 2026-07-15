@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Regenerable intermediate geometry (rebuilt by the pipeline from design vectors)
+results/geo/
+module2_openfoam/staging/
+module2_openfoam/case_template/constant/geometry/blade.stl
+
+# Logs
+logs/
+*.log
+results/cfd/*.meshsolve.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Large local OpenFOAM case data lives in WSL (~/fan_cfd), not in the repo
+fan_cfd/

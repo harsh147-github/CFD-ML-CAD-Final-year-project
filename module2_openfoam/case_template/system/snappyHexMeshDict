@@ -1,0 +1,118 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+| Castellate + snap around the fan STL; carve the 'rotor' cellZone (MRF).      |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry
+{
+    blade
+    {
+        type triSurfaceMesh;
+        file "blade.stl";
+    }
+    rotor
+    {
+        type   searchableCylinder;
+        point1 (0 -0.06 0);
+        point2 (0  0.06 0);
+        radius 0.17;
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells       2000000;
+    maxGlobalCells      6000000;
+    minRefinementCells  10;
+    maxLoadUnbalance    0.10;
+    nCellsBetweenLevels 3;
+
+    features
+    (
+        { file "blade.eMesh"; level 4; }
+    );
+
+    refinementSurfaces
+    {
+        blade
+        {
+            level (3 4);
+            patchInfo { type wall; }
+        }
+        rotor
+        {
+            level    (0 0);
+            faceZone rotor;
+            cellZone rotor;
+            mode     inside;
+        }
+    }
+
+    resolveFeatureAngle 30;
+
+    refinementRegions
+    {
+        rotor
+        {
+            mode   inside;
+            levels ((1e15 2));
+        }
+    }
+
+    locationInMesh (0.001 0.4 0.001);   // in the fluid, stator region
+    allowFreeStandingZoneFaces true;
+}
+
+snapControls
+{
+    nSmoothPatch        3;
+    tolerance           2.0;
+    nSolveIter          30;
+    nRelaxIter          5;
+    nFeatureSnapIter    10;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap false;
+}
+
+addLayersControls
+{
+    relativeSizes       true;
+    layers {}
+    expansionRatio      1.2;
+    finalLayerThickness 0.3;
+    minThickness        0.1;
+    nGrow               0;
+    featureAngle        60;
+    nRelaxIter          3;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals      3;
+    nSmoothThickness    10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle  90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter          50;
+}
+
+meshQualityControls
+{
+    #include "meshQualityDict"
+}
+
+writeFlags ( scalarLevels );
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

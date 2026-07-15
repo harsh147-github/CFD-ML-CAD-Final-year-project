@@ -1,0 +1,32 @@
+{
+  "name": "opt_00",
+  "design": {
+    "global_pitch_deg": 7.194080444667032,
+    "twist_deg": -17.99932174490396,
+    "chord_scale": 0.9069107679830538,
+    "camber": 0.010001544241359395,
+    "thickness_tc": 0.02719052595373029,
+    "sweep_deg": 11.251467059206755,
+    "tip_taper": 0.913237267895054,
+    "n_blades": 3
+  },
+  "rpm": 350.0,
+  "omega_rad_s": 36.651914291880914,
+  "status": "ok",
+  "geometry": {
+    "volume_mm3": 36481.23652645169,
+    "valid": true
+  },
+  "trustworthy_cfd": true,
+  "case": "//wsl.localhost/Ubuntu/home/harsh/fan_cfd/opt_00",
+  "converged": true,
+  "torque_Nm": 0.0005182176665277777,
+  "torque_cov": 0.00018033317764642168,
+  "power_W": 0.018993669498114634,
+  "flow_m3s": 0.04373468697222222,
+  "flow_cmm": 2.624081218333333,
+  "flow_cov": 0.00047063991899497866,
+  "plane_area_m2": 0.080367367,
+  "service_value_cmm_per_W": 138.1555690749387,
+  "n_force_samples": 241
+}

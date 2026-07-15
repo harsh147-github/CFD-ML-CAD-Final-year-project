@@ -1,0 +1,25 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| OpenFOAM 12 - fan CFD pipeline (Module 2)                                    |
+| Multiple Reference Frame: the 'rotor' cellZone spins about the fan axis (Y). |
+| omega [rad/s] is substituted by the runner from the design rpm.             |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      MRFProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+rotor
+{
+    cellZone    rotor;
+
+    origin      (0 0 0);
+    axis        (0 1 0);      // fan rotation axis = global +Y
+
+    omega       __OMEGA__;    // rad/s (runner substitutes)
+}
+
+// ************************************************************************* //

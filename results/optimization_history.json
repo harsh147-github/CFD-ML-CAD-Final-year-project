@@ -1,0 +1,165 @@
+[
+  {
+    "iter": 0,
+    "name": "opt_00",
+    "candidate": {
+      "design": {
+        "global_pitch_deg": 7.194080444667032,
+        "twist_deg": -17.99932174490396,
+        "chord_scale": 0.9069107679830538,
+        "camber": 0.010001544241359395,
+        "thickness_tc": 0.02719052595373029,
+        "sweep_deg": 11.251467059206755,
+        "tip_taper": 0.913237267895054,
+        "n_blades": 3
+      },
+      "pred_power_W": 0.015673201720084348,
+      "pred_flow_cmm": 3.596775071219752,
+      "pred_power_std": 0.000945242296963589,
+      "pred_flow_std": 0.07898366234725723,
+      "pred_service_value": 229.48566192513698,
+      "objective": "max_flow_at_power<=0.0157W",
+      "dist_to_data": 0.5999665026665304,
+      "geometry": {
+        "volume_mm3": 36481.23652645169,
+        "valid": true
+      }
+    },
+    "cfd": {
+      "power_W": 0.018993669498114634,
+      "flow_cmm": 2.624081218333333,
+      "service_value": 138.1555690749387,
+      "converged": true
+    },
+    "rel_err": 0.39797733803514074
+  },
+  {
+    "iter": 1,
+    "name": "opt_01",
+    "candidate": {
+      "design": {
+        "global_pitch_deg": 5.5186112440942985,
+        "twist_deg": -17.999390063748766,
+        "chord_scale": 1.2999832041547306,
+        "camber": 0.010006343617588356,
+        "thickness_tc": 0.020308508419387177,
+        "sweep_deg": -3.039020796503298,
+        "tip_taper": 0.5000005952031767,
+        "n_blades": 3
+      },
+      "pred_power_W": 0.015673218056262057,
+      "pred_flow_cmm": 3.442578837182536,
+      "pred_power_std": 0.0005393669947453877,
+      "pred_flow_std": 0.09501884560222704,
+      "pred_service_value": 219.6472239985899,
+      "objective": "max_flow_at_power<=0.0157W",
+      "dist_to_data": 0.5227208818938711,
+      "geometry": {
+        "volume_mm3": 38815.76352135183,
+        "valid": true
+      }
+    },
+    "cfd": {
+      "power_W": 0.021355669280648346,
+      "flow_cmm": 2.8672830875,
+      "service_value": 134.26332136067575,
+      "converged": true
+    },
+    "rel_err": 0.3887319907055247
+  },
+  {
+    "iter": 2,
+    "name": "opt_02",
+    "candidate": {
+      "design": {
+        "global_pitch_deg": 10.126502336544998,
+        "twist_deg": -17.999738627868535,
+        "chord_scale": 0.9402557453799066,
+        "camber": 0.025626626682345357,
+        "thickness_tc": 0.020006018232646805,
+        "sweep_deg": 0.8807753255102666,
+        "tip_taper": 0.7451705537107477,
+        "n_blades": 3
+      },
+      "pred_power_W": 0.015673200647685553,
+      "pred_flow_cmm": 2.2407238218686016,
+      "pred_power_std": 0.0006358234310548554,
+      "pred_flow_std": 0.032309931878171425,
+      "pred_service_value": 142.96529931807433,
+      "objective": "max_flow_at_power<=0.0157W",
+      "dist_to_data": 0.45871892400927483,
+      "geometry": {
+        "volume_mm3": 34900.09801628158,
+        "valid": true
+      }
+    },
+    "cfd": {
+      "power_W": 0.013676873213021586,
+      "flow_cmm": 2.191997699166666,
+      "service_value": 160.27038234731106,
+      "converged": true,
+      "trustworthy": true
+    },
+    "rel_err": 0.02174570655534937
+  },
+  {
+    "iter": 3,
+    "name": "sweep_15",
+    "candidate": {
+      "design": {
+        "global_pitch_deg": 6.524415284433223,
+        "twist_deg": -17.67729492100225,
+        "chord_scale": 0.7721294385704833,
+        "camber": 0.04501012193109459,
+        "thickness_tc": 0.03345307632225738,
+        "sweep_deg": -3.5492651320363438,
+        "tip_taper": 0.5196825129728071,
+        "n_blades": 3
+      },
+      "pred_flow_cmm": 4.360501059033472,
+      "pred_power_W": 0.02350295475167735,
+      "geometry": {
+        "volume_mm3": 35097.610782777796,
+        "valid": true
+      }
+    },
+    "cfd": {
+      "power_W": 0.017389607123054675,
+      "flow_cmm": 2.736307730833333,
+      "service_value": 157.35305067390564,
+      "converged": true,
+      "trustworthy": true
+    },
+    "rel_err": 0.3724785996405995
+  },
+  {
+    "iter": 4,
+    "name": "sweep_20",
+    "candidate": {
+      "design": {
+        "global_pitch_deg": 5.0105252754481135,
+        "twist_deg": -17.85251564944234,
+        "chord_scale": 0.8234720806722855,
+        "camber": 0.06226089659353773,
+        "thickness_tc": 0.042037692980980534,
+        "sweep_deg": 7.32355051353797,
+        "tip_taper": 0.5486468549661043,
+        "n_blades": 3
+      },
+      "pred_flow_cmm": 6.569247359969555,
+      "pred_power_W": 0.03126815732398393,
+      "geometry": {
+        "volume_mm3": 37293.325333023284,
+        "valid": true
+      }
+    },
+    "cfd": {
+      "power_W": 0.02613872564760861,
+      "flow_cmm": 3.203855395,
+      "service_value": 122.57121629390205,
+      "converged": true,
+      "trustworthy": true
+    },
+    "rel_err": 0.5122949069442791
+  }
+]

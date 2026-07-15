@@ -1,0 +1,32 @@
+{
+  "name": "doe_001",
+  "design": {
+    "global_pitch_deg": 6.590800863630839,
+    "twist_deg": -14.630691320550458,
+    "chord_scale": 0.8178026554822695,
+    "camber": 0.07232838014954773,
+    "thickness_tc": 0.05173196257542771,
+    "sweep_deg": -8.743246968435798,
+    "tip_taper": 1.1655062442250073,
+    "n_blades": 3
+  },
+  "omega_rad_s": 36.651914291880914,
+  "rpm": 350.0,
+  "geometry": {
+    "volume_mm3": 41110.892227466815,
+    "watertight_m": true
+  },
+  "case": "//wsl.localhost/Ubuntu/home/harsh/fan_cfd/doe_001",
+  "converged": true,
+  "torque_Nm": 0.00085683708525,
+  "torque_cov": 5.9083664646930554e-05,
+  "power_W": 0.031404719410688064,
+  "flow_m3s": 0.05465705432500001,
+  "flow_cmm": 3.2794232595000006,
+  "flow_cov": 0.0013315075319950116,
+  "plane_area_m2": 0.080367367,
+  "service_value_cmm_per_W": 104.42453621744203,
+  "n_force_samples": 161,
+  "status": "ok",
+  "wall_time_s": 399.1
+}

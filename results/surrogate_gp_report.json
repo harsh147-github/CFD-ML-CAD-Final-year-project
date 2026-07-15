@@ -1,0 +1,7 @@
+{
+  "model": "GP",
+  "n_points": 28,
+  "loo_mape_power_%": 16.03471029913853,
+  "loo_mape_flow_%": 36.94698169758076,
+  "loo_mape_service_value_%": 58.53397744382372
+}

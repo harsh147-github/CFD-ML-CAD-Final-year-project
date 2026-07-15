@@ -1,0 +1,7 @@
+{
+  "n_points": 10,
+  "device": "cuda",
+  "loo_mape_power_%": 88.13820639155547,
+  "loo_mape_flow_%": 121.68521932669249,
+  "loo_mape_service_value_%": 84.28468774196574
+}

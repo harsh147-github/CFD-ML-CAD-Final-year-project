@@ -1,0 +1,23 @@
+{
+  "design": {
+    "global_pitch_deg": 10.126502336544998,
+    "twist_deg": -17.999738627868535,
+    "chord_scale": 0.9402557453799066,
+    "camber": 0.025626626682345357,
+    "thickness_tc": 0.020006018232646805,
+    "sweep_deg": 0.8807753255102666,
+    "tip_taper": 0.7451705537107477,
+    "n_blades": 3
+  },
+  "pred_power_W": 0.015673200647685553,
+  "pred_flow_cmm": 2.2407238218686016,
+  "pred_power_std": 0.0006358234310548554,
+  "pred_flow_std": 0.032309931878171425,
+  "pred_service_value": 142.96529931807433,
+  "objective": "max_flow_at_power<=0.0157W",
+  "dist_to_data": 0.45871892400927483,
+  "geometry": {
+    "volume_mm3": 34900.09801628158,
+    "valid": true
+  }
+}
